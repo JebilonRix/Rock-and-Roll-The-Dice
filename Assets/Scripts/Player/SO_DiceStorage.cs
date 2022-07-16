@@ -9,16 +9,23 @@ public class SO_DiceStorage : ScriptableObject
     {
         _diceAmounts[(int)dice]++;
     }
-    public int GetTaotalDamage()
+    public int GetTotalDamage()
     {
         int totalDamage = 0;
 
-        //
+        //_diceAmounts 6 adet zardan kaç adet bulunduğunu temsil ediyor.
+        //_diceAmounts[0] => dice 1 kaç tane var.
+        //_diceAmounts[1] => dice 2 kaç tane var.
+        //i=0 => (i+1) = 1
+        //i=1 => (i+1) = 2
+        //Hasar formülü = zar adeti ^ zar numarası
 
         for (int i = 0; i < _diceAmounts.Length; i++)
         {
             totalDamage += _diceAmounts[i] ^ (i + 1);
         }
+
+        Debug.Log("hasar = " + totalDamage);
 
         return totalDamage;
     }
