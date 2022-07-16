@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657886, g: 0.4964128, b: 0.5748176, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -123,6 +123,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &206740705
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 206740707}
+  - component: {fileID: 206740706}
+  m_Layer: 0
+  m_Name: 4 dice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &206740706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206740705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2264170724e6510409daddb9f065f590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePrefabs: []
+  spawnTime: 5
+--- !u!4 &206740707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206740705}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -98, y: 35, z: 156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &214971008
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,8 +299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3733e35ee73a16d4d939ecd07d540a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashSpeed: 1000
-  startDashTime: 0.1
+  _startDashTime: 300
+  _dashSpeed: 0.1
 --- !u!143 &214971015
 CharacterController:
   m_ObjectHideFlags: 0
@@ -285,6 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad10d009e7fd0c42912214c3d728d4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tag: Enemy
 --- !u!1 &278513595
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,11 +653,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2264170724e6510409daddb9f065f590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab:
+  obstaclePrefabs:
   - {fileID: 5485417859592703273, guid: f0a85e812c6591c4595e571debdb46ab, type: 3}
   - {fileID: 4655810683502795204, guid: 88dbd9b3b068df947ae56b47fee0563b, type: 3}
   - {fileID: 2642728870203662394, guid: 33315abd11b2ea24a93e2cc47bd25b10, type: 3}
   - {fileID: 1279800967781601387, guid: 035569a8feed2344c85db53c4446f948, type: 3}
+  - {fileID: 713729578553523936, guid: f6cc006e6d3cd854dac2b64a6c064448, type: 3}
   - {fileID: 6631795217430739041, guid: b718d4c083475a04797cb465fd620f82, type: 3}
   spawnTime: 0.5
 --- !u!4 &736496439
@@ -844,6 +892,52 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!1 &1069915449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1069915451}
+  - component: {fileID: 1069915450}
+  m_Layer: 0
+  m_Name: 6 dice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1069915450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069915449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2264170724e6510409daddb9f065f590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePrefabs: []
+  spawnTime: 5
+--- !u!4 &1069915451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069915449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -98, y: 35, z: 156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1123577926
 GameObject:
   m_ObjectHideFlags: 0
@@ -855,7 +949,7 @@ GameObject:
   - component: {fileID: 1123577928}
   - component: {fileID: 1123577927}
   m_Layer: 0
-  m_Name: 1yuzluzar
+  m_Name: 1 dice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -873,8 +967,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2264170724e6510409daddb9f065f590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab:
-  - {fileID: 7055106443892863883, guid: b565074cd2eb20b44992a600b4d030f6, type: 3}
+  obstaclePrefabs:
+  - {fileID: 2213317097933648225, guid: 8d60f1e4281e95e40af0626fbb27b16c, type: 3}
   - {fileID: 1775668619}
   spawnTime: 5
 --- !u!4 &1123577928
@@ -1017,7 +1111,7 @@ GameObject:
   - component: {fileID: 1504234044}
   - component: {fileID: 1504234043}
   m_Layer: 0
-  m_Name: 3yuzluzar
+  m_Name: 3 dice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1035,11 +1129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2264170724e6510409daddb9f065f590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab:
-  - {fileID: 4478015605906440371, guid: f71180f9609b3344181371c9d3546def, type: 3}
-  - {fileID: 1775668619}
-  - {fileID: 1775668619}
-  - {fileID: 1775668619}
+  obstaclePrefabs: []
   spawnTime: 5
 --- !u!4 &1504234044
 Transform:
@@ -1181,7 +1271,7 @@ GameObject:
   - component: {fileID: 1629948598}
   - component: {fileID: 1629948597}
   m_Layer: 0
-  m_Name: 2yuzluzar
+  m_Name: 2 dice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1199,10 +1289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2264170724e6510409daddb9f065f590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstaclePrefab:
-  - {fileID: 1581081596174831751, guid: a2ce3c5db000c0b4fbd4f329e76c9ad6, type: 3}
-  - {fileID: 1775668619}
-  - {fileID: 1775668619}
+  obstaclePrefabs: []
   spawnTime: 5
 --- !u!4 &1629948598
 Transform:
@@ -1362,5 +1449,51 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1878227818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1878227820}
+  - component: {fileID: 1878227819}
+  m_Layer: 0
+  m_Name: 5 dice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1878227819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878227818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2264170724e6510409daddb9f065f590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obstaclePrefabs: []
+  spawnTime: 5
+--- !u!4 &1878227820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878227818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -98, y: 35, z: 156}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
