@@ -1,14 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class Movement2D : MonoBehaviour
 {
     [SerializeField] private Transform[] _walkPoints; // 0,1,2,3,4
+
     private SpriteRenderer _spriteRenderer;
     private bool _facingRight = true;
-    private int index = 2;
+    private int _index;
 
     private void Awake()
     {
@@ -16,6 +15,10 @@ public class Movement2D : MonoBehaviour
     }
     private void Start()
     {
+        _index = Mathf.RoundToInt(_walkPoints.Length / 2);
+
+        FacingHandler(false);
+
         Move(0);
     }
     private void Update()
@@ -45,22 +48,22 @@ public class Movement2D : MonoBehaviour
         _facingRight = turn;
         _spriteRenderer.flipX = !turn;
     }
-
     private void Move(int direction)
     {
-        index += direction;
+        _index += direction;
 
-        if (index > _walkPoints.Length - 1)
+        if (_index > _walkPoints.Length - 1)
         {
-            index = _walkPoints.Length - 1;
+            _index = _walkPoints.Length - 1;
             return;
         }
-        else if (index < 0)
+        else if (_index < 0)
         {
-            index = 0;
+            _index = 0;
             return;
         }
 
-        transform.position = _walkPoints[index].transform.position;
+        //Move towards, lerp
+        transform.position = _walkPoints[_index].transform.position;
     }
 }
