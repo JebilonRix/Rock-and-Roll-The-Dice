@@ -15,3 +15,4 @@ MonoBehaviour:
   _maxHealth: 1000
   _name: Enemy
   _uihandler: {fileID: 11400000, guid: 2371f04244b217646b6335089cc29064, type: 2}
+  _spriteHolder: {fileID: 11400000, guid: bb9db90c397c8ef4483f0aa5979c8819, type: 2}

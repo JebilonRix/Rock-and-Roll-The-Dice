@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f94c3d36825a6f4fbccfd9cc99208cc, type: 3}
+  m_Name: HealthBar Sprites
+  m_EditorClassIdentifier: 
+  _sprites:
+  - {fileID: -825689322, guid: 7fbcc313b162aba4dac77ab79002bd47, type: 3}
+  - {fileID: 493282666, guid: 7fbcc313b162aba4dac77ab79002bd47, type: 3}
+  - {fileID: 1100701477, guid: 3dd3909cbd8a0164caf2e2471360beae, type: 3}
+  - {fileID: -1319683481, guid: 3dd3909cbd8a0164caf2e2471360beae, type: 3}
+  - {fileID: -1958895261, guid: 1643075a656c20543b76b76bb5533fa7, type: 3}
+  - {fileID: -989064723, guid: 1643075a656c20543b76b76bb5533fa7, type: 3}

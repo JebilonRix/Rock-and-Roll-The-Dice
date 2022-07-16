@@ -11,6 +11,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip _loop;
     [SerializeField] private AudioClip _outro;
 
+    private float _counter = 0;
+    private bool _playMainLoop = false;
+
     private void Awake()
     {
         _audioSource = GetComponent<AudioSource>();
@@ -19,6 +22,24 @@ public class AudioManager : MonoBehaviour
     {
         _audioSource.outputAudioMixerGroup = _mixer;
         PlayThis("intro");
+
+        //Debug.Log("clip length " + _audioSource.clip.length);
+    }
+    private void Update()
+    {
+        if (_playMainLoop)
+        {
+            return;
+        }
+
+        _counter += Time.deltaTime;
+
+        if (_counter >= 13.710f)
+        {
+            PlayThis("main");
+            _counter = 0;
+            _playMainLoop = true;
+        }
     }
 
     public void PlayThis(string tag)
