@@ -3,6 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class Movement2D : MonoBehaviour
 {
+    [SerializeField] private PlayerStateMachine _playerStateMachine;
     [SerializeField] private Transform[] _walkPoints; // 0,1,2,3,4
 
     private SpriteRenderer _spriteRenderer;
@@ -23,22 +24,25 @@ public class Movement2D : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (_playerStateMachine.CharacterState == CharacterStates.Idle)
         {
-            Move(-1);
-
-            if (_facingRight)
+            if (Input.GetKeyDown(KeyCode.A))
             {
-                FacingHandler(false);
+                Move(-1);
+
+                if (_facingRight)
+                {
+                    FacingHandler(false);
+                }
             }
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            Move(1);
-
-            if (!_facingRight)
+            if (Input.GetKeyDown(KeyCode.D))
             {
-                FacingHandler(true);
+                Move(1);
+
+                if (!_facingRight)
+                {
+                    FacingHandler(true);
+                }
             }
         }
     }
