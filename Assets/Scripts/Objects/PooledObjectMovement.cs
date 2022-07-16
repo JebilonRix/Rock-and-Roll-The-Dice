@@ -18,7 +18,6 @@ public class PooledObjectMovement : MonoBehaviour
     {
         transform.Translate(Vector3.back * Time.deltaTime * _movementSpeed);
     }
-
     private void OnEnable()
     {
         if (_pooledObject.PooledObjectTag == "Dice")
@@ -28,7 +27,7 @@ public class PooledObjectMovement : MonoBehaviour
         }
         else if (_pooledObject.PooledObjectTag == "Rock")
         {
-            _spriteRenderer.sprite = _spriteHolder.Sprites[0];
+            _spriteRenderer.sprite = _spriteHolder.Sprites[Random.Range(0, _spriteHolder.Sprites.Length)];
         }
     }
 }
