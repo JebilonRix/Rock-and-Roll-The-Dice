@@ -10,6 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f94c3d36825a6f4fbccfd9cc99208cc, type: 3}
-  m_Name: SpriteHolder
+  m_Name: Rock Sprites
   m_EditorClassIdentifier: 
-  _sprites: []
+  _sprites:
+  - {fileID: 288714534, guid: 3cb1d6677544bc8489d1745b11e6816a, type: 3}
+  - {fileID: -1541530866, guid: 3cb1d6677544bc8489d1745b11e6816a, type: 3}
