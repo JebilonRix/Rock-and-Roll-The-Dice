@@ -39,19 +39,21 @@ namespace RedPanda.ObjectPooling
             {
                 _spawnPoints.Add(transform);
             }
+
+            StartStop(true);
         }
         private void Update()
         {
             SpawnLogic();
 
-            if (Input.GetKeyDown(KeyCode.F1))
-            {
-                StartStop(true);
-            }
-            if (Input.GetKeyDown(KeyCode.F2))
-            {
-                StartStop(false);
-            }
+            //if (Input.GetKeyDown(KeyCode.F1))
+            //{
+            //    StartStop(true);
+            //}
+            //if (Input.GetKeyDown(KeyCode.F2))
+            //{
+            //    StartStop(false);
+            //}
         }
         #endregion Unity Methods
 

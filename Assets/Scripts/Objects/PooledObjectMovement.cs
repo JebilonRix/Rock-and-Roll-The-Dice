@@ -22,8 +22,7 @@ public class PooledObjectMovement : MonoBehaviour
     {
         if (_pooledObject.PooledObjectTag == "Dice")
         {
-            //deðiþtir burayý
-            _spriteRenderer.sprite = _spriteHolder.Sprites[0];
+            return;
         }
         else if (_pooledObject.PooledObjectTag == "Rock")
         {

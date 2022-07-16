@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Player Health
   m_EditorClassIdentifier: 
   _maxHealth: 150
+  _name: Player
+  _uihandler: {fileID: 11400000, guid: 2371f04244b217646b6335089cc29064, type: 2}

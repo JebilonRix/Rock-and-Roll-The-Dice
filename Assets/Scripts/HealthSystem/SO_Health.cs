@@ -5,6 +5,7 @@ public class SO_Health : ScriptableObject
 {
     [SerializeField] private int _maxHealth;
     [SerializeField] private string _name = "Player";
+    [SerializeField] private UIHandler _uihandler;
     private int _health;
 
     private void OnDisable()
@@ -24,11 +25,11 @@ public class SO_Health : ScriptableObject
     {
         if (_name == "Player")
         {
-            //lose
+            _uihandler.ChangeActivePanel(3);
         }
         else
         {
-            //win
+            _uihandler.ChangeActivePanel(2);
         }
     }
 }

@@ -26,10 +26,12 @@ public class HitDetection : MonoBehaviour
         if (other.CompareTag(_diceTag))
         {
             _diceStorage.AddDice(other.GetComponent<DiceHandler>().Dice);
+            other.gameObject.SetActive(false);
         }
         if (other.CompareTag(_rockTag))
         {
             _health.TakeDamage(_rockHitDamage);
+            other.gameObject.SetActive(false);
         }
     }
 }

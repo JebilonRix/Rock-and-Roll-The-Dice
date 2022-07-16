@@ -6,16 +6,10 @@ public class UIHandler : ScriptableObject
 {
     private PanelChanger panelChanger;
 
-    /// <summary>
-    /// Bu method panel changer class'ýn scriptable objesine kuramayý saðlar.
-    /// </summary>
     public void UIHandlerInit(PanelChanger changer)
     {
         panelChanger = changer;
     }
-    /// <summary>
-    /// Main Menü'yü yükler.
-    /// </summary>
     public void LoadMainMenu()
     {
         LoadScene(0);

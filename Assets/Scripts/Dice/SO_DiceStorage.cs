@@ -3,39 +3,69 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "DiceStorage", menuName = "Systems/DiceStorage")]
 public class SO_DiceStorage : ScriptableObject
 {
-    private int[] _diceAmounts = new int[6];
+    [SerializeField] private int _dice1Count = 0;
+    [SerializeField] private int _dice2Count = 0;
+    [SerializeField] private int _dice3Count = 0;
+    [SerializeField] private int _dice4Count = 0;
+    [SerializeField] private int _dice5Count = 0;
+    [SerializeField] private int _dice6Count = 0;
 
     private void OnDisable()
     {
-        for (int i = 0; i < _diceAmounts.Length; i++)
-        {
-            _diceAmounts[(i)] = 0;
-        }
+        ResetValues();
     }
     public void AddDice(Dice dice)
     {
-        _diceAmounts[(int)dice]++;
+        switch (dice)
+        {
+            case Dice.Dice_1:
+                _dice1Count++;
+                break;
 
-        Debug.Log(dice.ToString() + " named dice's count is " + _diceAmounts[(int)dice]);
+            case Dice.Dice_2:
+                _dice2Count++;
+                break;
+
+            case Dice.Dice_3:
+                _dice3Count++;
+                break;
+
+            case Dice.Dice_4:
+                _dice4Count++;
+                break;
+
+            case Dice.Dice_5:
+                _dice5Count++;
+                break;
+
+            case Dice.Dice_6:
+                _dice6Count++;
+                break;
+        }
     }
     public int GetTotalDamage()
     {
         int totalDamage = 0;
+        int[] array = new int[] { _dice1Count, _dice2Count, _dice3Count, _dice4Count, _dice5Count, _dice6Count };
 
-        //_diceAmounts 6 adet zardan kaç adet bulunduðunu temsil ediyor.
-        //_diceAmounts[0] => dice 1 kaç tane var.
-        //_diceAmounts[1] => dice 2 kaç tane var.
-        //i=0 => (i+1) = 1
-        //i=1 => (i+1) = 2
-        //Hasar formülü = zar adeti ^ zar numarasý
-
-        for (int i = 0; i < _diceAmounts.Length; i++)
+        for (int i = 0; i < 6; i++)
         {
-            totalDamage += _diceAmounts[i] ^ (i + 1);
+            totalDamage += (int)Mathf.Pow(array[i], (i + 1));
         }
 
         Debug.Log("hasar = " + totalDamage);
+        ResetValues();
 
         return totalDamage;
+    }
+
+    private void ResetValues()
+    {
+        _dice1Count = 0;
+        _dice2Count = 0;
+        _dice3Count = 0;
+        _dice4Count = 0;
+        _dice5Count = 0;
+        _dice6Count = 0;
     }
 }
