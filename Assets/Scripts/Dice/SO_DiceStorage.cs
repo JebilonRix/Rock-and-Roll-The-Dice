@@ -5,9 +5,18 @@ public class SO_DiceStorage : ScriptableObject
 {
     private int[] _diceAmounts = new int[6];
 
+    private void OnDisable()
+    {
+        for (int i = 0; i < _diceAmounts.Length; i++)
+        {
+            _diceAmounts[(i)] = 0;
+        }
+    }
     public void AddDice(Dice dice)
     {
         _diceAmounts[(int)dice]++;
+
+        Debug.Log(dice.ToString() + " named dice's count is " + _diceAmounts[(int)dice]);
     }
     public int GetTotalDamage()
     {

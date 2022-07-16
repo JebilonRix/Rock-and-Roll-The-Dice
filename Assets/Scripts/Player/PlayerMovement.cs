@@ -1,9 +1,8 @@
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class Movement2D : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private PlayerStateMachine _playerStateMachine;
     [SerializeField] private Transform[] _walkPoints; // 0,1,2,3,4
 
     private SpriteRenderer _spriteRenderer;
@@ -22,28 +21,22 @@ public class Movement2D : MonoBehaviour
 
         Move(0);
     }
-    private void Update()
+    public void GoRight()
     {
-        if (_playerStateMachine.CharacterState == CharacterStates.Idle)
+        Move(1);
+
+        if (!_facingRight)
         {
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                Move(-1);
+            FacingHandler(true);
+        }
+    }
+    public void GoLeft()
+    {
+        Move(-1);
 
-                if (_facingRight)
-                {
-                    FacingHandler(false);
-                }
-            }
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                Move(1);
-
-                if (!_facingRight)
-                {
-                    FacingHandler(true);
-                }
-            }
+        if (_facingRight)
+        {
+            FacingHandler(false);
         }
     }
 

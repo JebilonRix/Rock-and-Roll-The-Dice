@@ -96,13 +96,17 @@ namespace RedPanda.ObjectPooling
         private void SpawnLogic()
         {
             if (!_startSpawner)
-            { return; }
+            {
+                return;
+            }
             if (!_delayFinished)
-            { return; }
-            if (_hasLimit)
-            { return; }
-            if (_limit <= _objectCounter)
-            { return; }
+            {
+                return;
+            }
+            if (_hasLimit && _limit <= _objectCounter)
+            {
+                return;
+            }
 
             _timeCounter += Time.deltaTime;
 

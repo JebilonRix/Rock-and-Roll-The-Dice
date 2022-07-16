@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3321676080689954031}
   - component: {fileID: 3321676080689954032}
   - component: {fileID: 3321676080689954033}
+  - component: {fileID: -3042350115732313432}
   m_Layer: 0
   m_Name: Dice
   m_TagString: Dice
@@ -111,3 +112,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _dice: 0
+--- !u!114 &-3042350115732313432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3321676080689954034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8333e166fd0f29439cc7b8c0fbda383, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pooledObject: {fileID: 11400000, guid: 8651d91885471ad4197f4ea3e6ca331c, type: 2}
