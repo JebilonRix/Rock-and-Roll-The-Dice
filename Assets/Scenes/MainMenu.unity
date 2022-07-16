@@ -3476,7 +3476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d46a9a165b4a6b14b84d04ad6021773d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiHandler: {fileID: 11400000, guid: 2371f04244b217646b6335089cc29064, type: 2}
+  _uiHandler: {fileID: 11400000, guid: 2371f04244b217646b6335089cc29064, type: 2}
   _panels:
   - {fileID: 615687685}
   - {fileID: 265877470}
