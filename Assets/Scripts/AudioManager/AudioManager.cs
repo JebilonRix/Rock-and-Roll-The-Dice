@@ -22,8 +22,6 @@ public class AudioManager : MonoBehaviour
     {
         _audioSource.outputAudioMixerGroup = _mixer;
         PlayThis("intro");
-
-        //Debug.Log("clip length " + _audioSource.clip.length);
     }
     private void Update()
     {
@@ -34,7 +32,7 @@ public class AudioManager : MonoBehaviour
 
         _counter += Time.deltaTime;
 
-        if (_counter >= 13.710f)
+        if (_counter >= 13.700f)
         {
             PlayThis("main");
             _counter = 0;
