@@ -31,19 +31,19 @@ namespace RedPanda.AudioSystem
         {
             if (_isPlaying)
             {
-                //Debug.Log("to queue");
+                Debug.Log("to queue");
                 _playQueue.Enqueue(index);
                 return;
             }
             else
             {
-                //Debug.Log("play");
+                Debug.Log("play");
                 _lastIndex = index;
                 PlayAudio(source);
                 source.GetComponent<MonoBehaviour>().StartCoroutine(PlayTimer(source, Clips[_lastIndex].length));
             }
         }
-        public override void PlayAudio(AudioSource source)
+        public void PlayAudioOnce(AudioSource source, int index)
         {
             if (Clips == null)
             {
@@ -56,7 +56,7 @@ namespace RedPanda.AudioSystem
             }
 
             source.bypassEffects = _byPassEffects;
-            source.clip = Clips[_lastIndex];
+            source.clip = Clips[index];
             source.volume = _volume;
 
             if (_spatialBlend > 0)
@@ -98,6 +98,31 @@ namespace RedPanda.AudioSystem
             {
                 PlayDynamic(source, _lastIndex);
             }
+        }
+
+        public override void PlayAudio(AudioSource source)
+        {
+            if (Clips == null)
+            {
+                return;
+            }
+
+            if (source.outputAudioMixerGroup == null)
+            {
+                source.outputAudioMixerGroup = _outputMixerGroup;
+            }
+
+            source.bypassEffects = _byPassEffects;
+            source.clip = Clips[_lastIndex];
+            source.volume = _volume;
+
+            if (_spatialBlend > 0)
+            {
+                _minDistance = _soundArea;
+                _maxDistance = _soundArea * 2.5f;
+            }
+
+            source.Play();
         }
         #endregion Private Methods
     }

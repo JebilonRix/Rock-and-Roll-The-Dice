@@ -1,14 +1,21 @@
+using RedPanda.AudioSystem;
 using UnityEngine;
 using static UnityEngine.SceneManagement.SceneManager;
 
 [CreateAssetMenu(fileName = "UIHandler", menuName = "UI/UIHandler")]
 public class UIHandler : ScriptableObject
 {
-    private PanelChanger panelChanger;
+    [SerializeField] private SO_DynamicMusic _music;
+    private PanelChanger _panelChanger;
+    private AudioSource _source;
 
+    public void AudioSourceInýt(AudioSource source)
+    {
+        _source = source;
+    }
     public void UIHandlerInit(PanelChanger changer)
     {
-        panelChanger = changer;
+        _panelChanger = changer;
     }
     public void LoadMainMenu()
     {
@@ -22,7 +29,9 @@ public class UIHandler : ScriptableObject
     }
     public void ChangeActivePanel(int index)
     {
-        panelChanger.ChangeActivePanel(index);
+        _panelChanger.ChangeActivePanel(index);
+        _music.StopAudio(_source);
+        _music.PlayAudioOnce(_source, 3);
     }
     public void QuitGame()
     {

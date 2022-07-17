@@ -16,10 +16,16 @@ public class SO_Health : ScriptableObject
 
     private void OnDisable()
     {
+        ResetHealth();
+    }
+    public void ResetHealth()
+    {
         Health = _maxHealth;
+        SetSprite();
     }
     public void HealthBarInýt(Image image)
     {
+        Debug.Log("bar setted");
         _image = image;
         SetSprite();
     }
@@ -50,6 +56,11 @@ public class SO_Health : ScriptableObject
 
     private void SetSprite()
     {
+        if (_image == null)
+        {
+            return;
+        }
+
         if (Health <= _maxHealth && Health > _maxHealth * 0.8f)
         {
             _image.sprite = _spriteHolder.Sprites[0];

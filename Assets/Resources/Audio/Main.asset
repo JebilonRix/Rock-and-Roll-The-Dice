@@ -19,5 +19,6 @@ MonoBehaviour:
   _soundArea: 5
   _clips:
   - {fileID: 8300000, guid: 4ae108704740c2242bae16bd74f5af0e, type: 3}
+  - {fileID: 8300000, guid: 43e486eba96987143960b79135a5c57d, type: 3}
   - {fileID: 8300000, guid: f37f7b8f045584f4d9e4208a7d235885, type: 3}
   - {fileID: 8300000, guid: c7537b65b22c4b6429a367a39f1123fb, type: 3}
