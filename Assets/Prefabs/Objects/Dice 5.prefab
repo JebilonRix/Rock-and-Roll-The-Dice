@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pooledObject: {fileID: 11400000, guid: bd10b9919eb04cf4d9623978dc58cb58, type: 2}
   _spriteHolder: {fileID: 0}
-  _movementSpeed: 1
+  _movementSpeed: 2
 --- !u!212 &543290161895751820
 SpriteRenderer:
   m_ObjectHideFlags: 0

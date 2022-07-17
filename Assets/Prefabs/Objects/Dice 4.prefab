@@ -75,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pooledObject: {fileID: 11400000, guid: 0ecea30b587f02648afd41bc247327d0, type: 2}
   _spriteHolder: {fileID: 0}
-  _movementSpeed: 1
+  _movementSpeed: 2
 --- !u!212 &543290161895751820
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -117,7 +117,7 @@ SpriteRenderer:
   m_SortingLayerID: -509561387
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -227611988, guid: a01acdb95fb807d4d87ade427471e1d1, type: 3}
+  m_Sprite: {fileID: -458641526, guid: a01acdb95fb807d4d87ade427471e1d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

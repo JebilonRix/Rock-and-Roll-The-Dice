@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider))]
@@ -15,6 +16,9 @@ public class HitDetection : MonoBehaviour
     [SerializeField] private string _diceTag = "Dice";
     [SerializeField] private string _rockTag = "Rock";
 
+    [Header("Texts")]
+    [SerializeField] private List<GetCount> _counts = new List<GetCount>();
+
     private void Awake()
     {
         BoxCollider col = GetComponent<BoxCollider>();
@@ -25,7 +29,22 @@ public class HitDetection : MonoBehaviour
     {
         if (other.CompareTag(_diceTag))
         {
-            _diceStorage.AddDice(other.GetComponent<DiceHandler>().Dice);
+            DiceHandler diceHandler = other.GetComponent<DiceHandler>();
+
+            //Debug.Log(diceHandler.Dice.ToString());
+
+            _diceStorage.AddDice(diceHandler.Dice);
+
+            foreach (GetCount item in _counts)
+            {
+                if (item.Dice != diceHandler.Dice)
+                {
+                    continue;
+                }
+
+                item.Text.text = _diceStorage.GetDiceCount(item.Dice).ToString();
+            }
+
             other.gameObject.SetActive(false);
         }
         if (other.CompareTag(_rockTag))
