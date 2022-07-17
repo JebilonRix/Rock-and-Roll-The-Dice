@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a854750c25145b740972d00dd19b6f50, type: 3}
   m_Name: Main
   m_EditorClassIdentifier: 
-  _outputMixerGroup: {fileID: 24300002, guid: e3755b2e3e7ed3443b4b76d0c4a263d8, type: 2}
+  _outputMixerGroup: {fileID: 4318555251316255548, guid: e3755b2e3e7ed3443b4b76d0c4a263d8, type: 2}
   _volume: 1
   _byPassEffects: 1
   _spatialBlend: 0
