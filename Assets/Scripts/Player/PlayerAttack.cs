@@ -15,7 +15,7 @@ public class PlayerAttack : MonoBehaviour
         var damage = _diceStorage.GetTotalDamage();
         _enemyHealth.TakeDamage(damage);
 
-        _solos.PlayDirectly(_audioSource, Random.Range(0, _solos.Clips.Length - 3));
+        _solos.PlayDirectlyOnce(_audioSource, Random.Range(0, _solos.Clips.Length));
 
         _shot.DoSnapshot("Attack");
     }

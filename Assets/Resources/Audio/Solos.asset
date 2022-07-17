@@ -18,10 +18,16 @@ MonoBehaviour:
   _spatialBlend: 0
   _soundArea: 5
   _clips:
-  - {fileID: 8300000, guid: ccf86ff1a5d644f45ba7825df4983c61, type: 3}
-  - {fileID: 8300000, guid: 98ae9ede95b7d6c4a901781b1100cdef, type: 3}
-  - {fileID: 8300000, guid: bab764c5937fd3947b71ffd36fc842b1, type: 3}
-  - {fileID: 8300000, guid: ff43260a2c06aeb4ea9bb3eb0a58fcb5, type: 3}
-  - {fileID: 8300000, guid: 8dde166fcaa097845926188e5de91b0c, type: 3}
-  - {fileID: 8300000, guid: 63933fbf25ec56841aa30ce5a3eaaba0, type: 3}
-  - {fileID: 8300000, guid: a79584ad1d7409b4da43452c9d030507, type: 3}
+  - {fileID: 8300000, guid: 27910e0eead173d4183b20dff752961d, type: 3}
+  - {fileID: 8300000, guid: 751afff5bc35622448ee03511d7541f2, type: 3}
+  - {fileID: 8300000, guid: 27bee36d21ae3ed4cbdd3750a0c594c2, type: 3}
+  - {fileID: 8300000, guid: e1110519419544e4282457d6833576d1, type: 3}
+  - {fileID: 8300000, guid: 0fcf7753f77f4f349b14ab476dae5b0d, type: 3}
+  - {fileID: 8300000, guid: b36887c1442ed4a4fb2100e11afe0354, type: 3}
+  - {fileID: 8300000, guid: 87bd20a72867f2d4596636cad5fc222b, type: 3}
+  - {fileID: 8300000, guid: 2d14df3b2a941ac44a05961f60cf45b9, type: 3}
+  - {fileID: 8300000, guid: 5450246c5ed2e454d911c474b34cc176, type: 3}
+  - {fileID: 8300000, guid: ba740ee7d253e3d4791c9741b3394b63, type: 3}
+  - {fileID: 8300000, guid: 039a530a0ceeb1040a8a244e0b1f4be8, type: 3}
+  - {fileID: 8300000, guid: 25333aa9b89f72e418809bf14c9908df, type: 3}
+  - {fileID: 8300000, guid: df11d637e968c714eb9047f28b0a5ab4, type: 3}

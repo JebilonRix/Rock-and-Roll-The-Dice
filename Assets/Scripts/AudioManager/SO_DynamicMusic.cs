@@ -37,7 +37,6 @@ namespace RedPanda.AudioSystem
             }
             else
             {
-                Debug.Log("play");
                 _lastIndex = index;
                 PlayAudio(source);
                 source.GetComponent<MonoBehaviour>().StartCoroutine(PlayTimer(source, Clips[_lastIndex].length));
@@ -65,6 +64,8 @@ namespace RedPanda.AudioSystem
                 _maxDistance = _soundArea * 2.5f;
             }
 
+            Debug.Log(source.clip.name);
+
             source.Play();
         }
         public override void StopAudio(AudioSource source)
@@ -82,6 +83,12 @@ namespace RedPanda.AudioSystem
             StopAudio(source);
             PlayDynamic(source, index);
         }
+        public void PlayDirectlyOnce(AudioSource source, int index)
+        {
+            StopAudio(source);
+            PlayAudioOnce(source, index);
+        }
+
         #endregion Public Methods
 
         #region Private Methods
@@ -92,8 +99,6 @@ namespace RedPanda.AudioSystem
             yield return new WaitForSeconds(seconds);
 
             _isPlaying = false;
-
-            //source.Stop();
 
             if (_playQueue.Count > 0)
             {
@@ -127,6 +132,7 @@ namespace RedPanda.AudioSystem
                 _maxDistance = _soundArea * 2.5f;
             }
 
+            Debug.Log(source.clip.name);
             source.Play();
         }
         #endregion Private Methods

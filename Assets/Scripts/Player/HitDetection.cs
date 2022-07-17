@@ -32,6 +32,10 @@ public class HitDetection : MonoBehaviour
         col.enabled = true;
         col.isTrigger = true;
     }
+    private void Start()
+    {
+        _diceStorage.HitInit(this);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag(_diceTag))
@@ -56,8 +60,16 @@ public class HitDetection : MonoBehaviour
         {
             _health.TakeDamage(_rockHitDamage);
             other.gameObject.SetActive(false);
-            _solos.PlayDynamic(_audioSource, Random.Range(_solos.Clips.Length - 3, _solos.Clips.Length));
+            _solos.PlayAudioOnce(_audioSource, Random.Range(0, _solos.Clips.Length));
             _shot.DoSnapshot("Defend");
+        }
+    }
+
+    public void ResetText()
+    {
+        foreach (GetCount item in Counts)
+        {
+            item.Text.text = 0.ToString();
         }
     }
 }

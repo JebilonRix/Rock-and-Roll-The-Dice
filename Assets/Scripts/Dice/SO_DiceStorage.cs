@@ -9,6 +9,7 @@ public class SO_DiceStorage : ScriptableObject
     [SerializeField] private int _dice4Count = 0;
     [SerializeField] private int _dice5Count = 0;
     [SerializeField] private int _dice6Count = 0;
+    private HitDetection _hit;
 
     public int Dice1Count { get => _dice1Count; private set => _dice1Count = value; }
     public int Dice2Count { get => _dice2Count; private set => _dice2Count = value; }
@@ -20,6 +21,11 @@ public class SO_DiceStorage : ScriptableObject
     private void OnDisable()
     {
         ResetValues();
+    }
+
+    public void HitInit(HitDetection hit)
+    {
+        _hit = hit;
     }
     public int GetDiceCount(Dice dice)
     {
@@ -85,8 +91,9 @@ public class SO_DiceStorage : ScriptableObject
             totalDamage += (int)Mathf.Pow(array[i], (i + 1));
         }
 
-        Debug.Log("hasar = " + totalDamage);
+        //Debug.Log("hasar = " + totalDamage);
         ResetValues();
+        _hit.ResetText();
 
         return totalDamage;
     }
