@@ -14,6 +14,8 @@ namespace RedPanda.AudioSystem
         private Queue<int> _playQueue = new Queue<int>();
         private bool _isPlaying = false;
         private int _lastIndex = 0;
+
+        public AudioClip[] Clips { get => _clips; private set => _clips = value; }
         #endregion Fields
 
         #region Unity Methods
@@ -38,12 +40,12 @@ namespace RedPanda.AudioSystem
                 //Debug.Log("play");
                 _lastIndex = index;
                 PlayAudio(source);
-                source.GetComponent<MonoBehaviour>().StartCoroutine(PlayTimer(source, _clips[_lastIndex].length));
+                source.GetComponent<MonoBehaviour>().StartCoroutine(PlayTimer(source, Clips[_lastIndex].length));
             }
         }
         public override void PlayAudio(AudioSource source)
         {
-            if (_clips == null)
+            if (Clips == null)
             {
                 return;
             }
@@ -54,7 +56,7 @@ namespace RedPanda.AudioSystem
             }
 
             source.bypassEffects = _byPassEffects;
-            source.clip = _clips[_lastIndex];
+            source.clip = Clips[_lastIndex];
             source.volume = _volume;
 
             if (_spatialBlend > 0)
