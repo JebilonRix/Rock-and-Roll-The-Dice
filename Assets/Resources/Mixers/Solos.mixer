@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!245 &-5606112511253854129
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Attack
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: ac6413da8a39ca54cbf62b51d3066d1b
+  m_FloatValues:
+    bb864e4532d52074d8ecdca98349bc0e: -4.1973577
+    73415cf86034a1b4d8a7550bbe56a563: -28.727043
+  m_TransitionOverrides: {}
 --- !u!244 &-3075745317896095679
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -20,7 +33,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Solos
+  m_Name: Enemy
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 5c40b278598947c4889d5c797c7c31f0
   m_Children: []
@@ -39,11 +52,13 @@ AudioMixerController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Master
-  m_OutputGroup: {fileID: 0}
+  m_Name: Solos
+  m_OutputGroup: {fileID: -2816526582641241387, guid: e3755b2e3e7ed3443b4b76d0c4a263d8, type: 2}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
   - {fileID: 24500006}
+  - {fileID: -5606112511253854129}
+  - {fileID: 8291198101755010948}
   m_StartSnapshot: {fileID: 24500006}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
@@ -104,8 +119,8 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 7a88adf7be81faa4aa0f5ea49aef72c9
   m_FloatValues:
-    bb864e4532d52074d8ecdca98349bc0e: -4.1973577
-    73415cf86034a1b4d8a7550bbe56a563: -2.2889833
+    bb864e4532d52074d8ecdca98349bc0e: -17.938717
+    73415cf86034a1b4d8a7550bbe56a563: -19.255655
   m_TransitionOverrides: {}
 --- !u!244 &4045715876610281065
 AudioMixerEffectController:
@@ -127,7 +142,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Main
+  m_Name: Player
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 484f50006c5f1824790acbb1068ed2bb
   m_Children: []
@@ -140,3 +155,16 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!245 &8291198101755010948
+AudioMixerSnapshotController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Defend
+  m_AudioMixer: {fileID: 24100000}
+  m_SnapshotID: b46168298f9935344a8eac1325fab094
+  m_FloatValues:
+    bb864e4532d52074d8ecdca98349bc0e: -23.43374
+    73415cf86034a1b4d8a7550bbe56a563: -3.5090396
+  m_TransitionOverrides: {}

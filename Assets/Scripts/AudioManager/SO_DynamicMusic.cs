@@ -77,6 +77,11 @@ namespace RedPanda.AudioSystem
             _lastIndex = 0;
             _isPlaying = false;
         }
+        public void PlayDirectly(AudioSource source, int index)
+        {
+            StopAudio(source);
+            PlayDynamic(source, index);
+        }
         #endregion Public Methods
 
         #region Private Methods

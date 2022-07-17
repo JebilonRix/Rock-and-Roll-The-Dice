@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PanelChanger : MonoBehaviour
 {
@@ -24,15 +23,7 @@ public class PanelChanger : MonoBehaviour
     {
         _uiHandler.UIHandlerInit(this);
 
-        if (SceneManager.GetActiveScene().name == "MainMenu")
-        {
-            ChangeActivePanel(0);
-        }
-        else if (SceneManager.GetActiveScene().name == "Game")
-        {
-            ChangeActivePanel(1);
-        }
-
+        ChangeActivePanel(0);
     }
     public void ChangeActivePanel(int index)
     {

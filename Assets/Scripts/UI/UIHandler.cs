@@ -24,14 +24,11 @@ public class UIHandler : ScriptableObject
     }
     public void LoadGame()
     {
-        LoadScene(1);
         ChangeActivePanel(1);
     }
     public void ChangeActivePanel(int index)
     {
         _panelChanger.ChangeActivePanel(index);
-        _music.StopAudio(_source);
-        _music.PlayAudioOnce(_source, 3);
     }
     public void QuitGame()
     {
