@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 3c5e0000
-      m_LastClickedID: 24124
-      m_ExpandedIDs: 7cf5ffff2cfbffff3e550000f8550000605d0000
+      m_SelectedIDs: ea560000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 3ee7ffff7ee7ffff82e7ffff62e8ffffa2e8ffffa6e8ffff18ebffff58ebffff36ecffff7cf5ffff2cfbffff3e550000f8550000605d0000867c0000407d0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -614,7 +614,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -623,14 +623,14 @@ MonoBehaviour:
     y: 630
     width: 1466
     height: 317
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 11}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
   - {fileID: 11}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -672,21 +672,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/UI
+    - Assets/Resources
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/UI
+  - Assets/Resources
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Arda\GameJam Games\Rock-and-Roll-The-Dice
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 60}
-    m_SelectedIDs: 12610000
-    m_LastClickedID: 24850
+    m_SelectedIDs: 90580000
+    m_LastClickedID: 22672
     m_ExpandedIDs: 000000008e5800009258000094580000e8600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -715,7 +715,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008e580000905800009258000094580000
+    m_ExpandedIDs: 000000008e5800009258000094580000e8600000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -740,9 +740,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 52190000
-    m_LastClickedInstanceID: 6482
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: ea560000
+    m_LastClickedInstanceID: 22250
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000127e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
