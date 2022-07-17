@@ -1,4 +1,5 @@
 using RedPanda.AudioSystem;
+using RedPanda.AudioSystem.AudioSettings;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
@@ -8,22 +9,14 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private SO_DiceStorage _diceStorage;
     [SerializeField] private SO_DynamicMusic _solos;
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private SO_Snapshot _shot;
     public void Attack()
     {
         var damage = _diceStorage.GetTotalDamage();
         _enemyHealth.TakeDamage(damage);
 
-        if (damage < 100)
-        {
-            _solos.PlayDynamic(_audioSource, 0);
-        }
-        else if (damage > 250)
-        {
-            _solos.PlayDynamic(_audioSource, 1);
-        }
-        else if (damage > 400)
-        {
-            _solos.PlayDynamic(_audioSource, 2);
-        }
+        _solos.PlayDirectly(_audioSource, Random.Range(0, _solos.Clips.Length - 3));
+
+        _shot.DoSnapshot("Attack");
     }
 }

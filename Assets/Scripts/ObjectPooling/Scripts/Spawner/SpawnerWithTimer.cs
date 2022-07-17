@@ -40,7 +40,7 @@ namespace RedPanda.ObjectPooling
                 _spawnPoints.Add(transform);
             }
 
-            StartStop(true);
+            //StartStop(true);
         }
         private void Update()
         {

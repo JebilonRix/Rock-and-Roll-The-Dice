@@ -1,4 +1,5 @@
 using RedPanda.AudioSystem;
+using RedPanda.AudioSystem.AudioSettings;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class HitDetection : MonoBehaviour
     [SerializeField] private SO_DiceStorage _diceStorage;
     [SerializeField] private SO_DynamicMusic _solos;
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private SO_Snapshot _shot;
 
     [Header("Numbers")]
     [SerializeField] private int _rockHitDamage = 10;
@@ -22,7 +24,7 @@ public class HitDetection : MonoBehaviour
     [Header("Texts")]
     [SerializeField] private List<GetCount> _counts = new List<GetCount>();
 
-
+    public List<GetCount> Counts { get => _counts; private set => _counts = value; }
 
     private void Awake()
     {
@@ -38,7 +40,7 @@ public class HitDetection : MonoBehaviour
 
             _diceStorage.AddDice(diceHandler.Dice);
 
-            foreach (GetCount item in _counts)
+            foreach (GetCount item in Counts)
             {
                 if (item.Dice != diceHandler.Dice)
                 {
@@ -48,14 +50,14 @@ public class HitDetection : MonoBehaviour
                 item.Text.text = _diceStorage.GetDiceCount(item.Dice).ToString();
             }
 
-            _solos.PlayDynamic(_audioSource, Random.Range(_solos.Clips.Length - 3, _solos.Clips.Length));
-
             other.gameObject.SetActive(false);
         }
         if (other.CompareTag(_rockTag))
         {
             _health.TakeDamage(_rockHitDamage);
             other.gameObject.SetActive(false);
+            _solos.PlayDynamic(_audioSource, Random.Range(_solos.Clips.Length - 3, _solos.Clips.Length));
+            _shot.DoSnapshot("Defend");
         }
     }
 }
