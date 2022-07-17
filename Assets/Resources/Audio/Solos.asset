@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a854750c25145b740972d00dd19b6f50, type: 3}
+  m_Name: Solos
+  m_EditorClassIdentifier: 
+  _outputMixerGroup: {fileID: 0}
+  _volume: 1
+  _byPassEffects: 1
+  _spatialBlend: 0
+  _soundArea: 5
+  _clips:
+  - {fileID: 8300000, guid: ccf86ff1a5d644f45ba7825df4983c61, type: 3}
+  - {fileID: 8300000, guid: 98ae9ede95b7d6c4a901781b1100cdef, type: 3}
+  - {fileID: 8300000, guid: bab764c5937fd3947b71ffd36fc842b1, type: 3}
+  - {fileID: 8300000, guid: ff43260a2c06aeb4ea9bb3eb0a58fcb5, type: 3}
+  - {fileID: 8300000, guid: 8dde166fcaa097845926188e5de91b0c, type: 3}
+  - {fileID: 8300000, guid: 63933fbf25ec56841aa30ce5a3eaaba0, type: 3}
+  - {fileID: 8300000, guid: a79584ad1d7409b4da43452c9d030507, type: 3}

@@ -31,8 +31,6 @@ public class HitDetection : MonoBehaviour
         {
             DiceHandler diceHandler = other.GetComponent<DiceHandler>();
 
-            //Debug.Log(diceHandler.Dice.ToString());
-
             _diceStorage.AddDice(diceHandler.Dice);
 
             foreach (GetCount item in _counts)

@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a854750c25145b740972d00dd19b6f50, type: 3}
-  m_Name: DynamicMusic
+  m_Name: Main
   m_EditorClassIdentifier: 
   _outputMixerGroup: {fileID: 24300002, guid: e3755b2e3e7ed3443b4b76d0c4a263d8, type: 2}
   _volume: 1
   _byPassEffects: 1
   _spatialBlend: 0
   _soundArea: 5
-  _clips: []
+  _clips:
+  - {fileID: 8300000, guid: 4ae108704740c2242bae16bd74f5af0e, type: 3}
+  - {fileID: 8300000, guid: f37f7b8f045584f4d9e4208a7d235885, type: 3}
+  - {fileID: 8300000, guid: c7537b65b22c4b6429a367a39f1123fb, type: 3}

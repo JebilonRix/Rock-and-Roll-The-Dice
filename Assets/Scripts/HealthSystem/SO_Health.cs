@@ -12,9 +12,11 @@ public class SO_Health : ScriptableObject
     private int _health;
     private Image _image;
 
+    public int Health { get => _health; private set => _health = value; }
+
     private void OnDisable()
     {
-        _health = _maxHealth;
+        Health = _maxHealth;
     }
     public void HealthBarInýt(Image image)
     {
@@ -23,11 +25,11 @@ public class SO_Health : ScriptableObject
     }
     public void TakeDamage(int damage)
     {
-        _health -= damage;
+        Health -= damage;
 
         SetSprite();
 
-        if (_health <= 0)
+        if (Health <= 0)
         {
             WinLoseCondition();
         }
@@ -48,27 +50,27 @@ public class SO_Health : ScriptableObject
 
     private void SetSprite()
     {
-        if (_health <= _maxHealth && _health > _maxHealth * 0.8f)
+        if (Health <= _maxHealth && Health > _maxHealth * 0.8f)
         {
             _image.sprite = _spriteHolder.Sprites[0];
         }
-        else if (_health < _maxHealth * 0.8f && _health > _maxHealth * 0.6f)
+        else if (Health < _maxHealth * 0.8f && Health > _maxHealth * 0.6f)
         {
             _image.sprite = _spriteHolder.Sprites[1];
         }
-        else if (_health < _maxHealth * 0.6f && _health > _maxHealth * 0.4f)
+        else if (Health < _maxHealth * 0.6f && Health > _maxHealth * 0.4f)
         {
             _image.sprite = _spriteHolder.Sprites[2];
         }
-        else if (_health < _maxHealth * 0.4f && _health > _maxHealth * 0.2f)
+        else if (Health < _maxHealth * 0.4f && Health > _maxHealth * 0.2f)
         {
             _image.sprite = _spriteHolder.Sprites[3];
         }
-        else if (_health < _maxHealth * 0.2f)
+        else if (Health < _maxHealth * 0.2f)
         {
             _image.sprite = _spriteHolder.Sprites[4];
         }
-        else if (_health <= 0)
+        else if (Health <= 0)
         {
             _image.sprite = _spriteHolder.Sprites[5];
         }
