@@ -2,22 +2,22 @@ using UnityEngine;
 
 public class PanelChanger : MonoBehaviour
 {
-    private static PanelChanger _instance;
+    //private static PanelChanger _instance;
 
     [SerializeField] private UIHandler _uiHandler;
     [SerializeField] private GameObject[] _panels;
 
     private void Awake()
     {
-        if (_instance == null)
-        {
-            _instance = this;
-            DontDestroyOnLoad(this);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        //if (_instance == null)
+        //{
+        //    _instance = this;
+        //    DontDestroyOnLoad(this);
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //}
     }
     private void Start()
     {
